@@ -27,6 +27,9 @@ var bookdescriptioninput=document.getElementById("book-description-input")
 
 addbook.addEventListener("click",function(event){
     event.preventDefault()
+    if(booktitleinput.value==""||bookauthorinput.value==""||bookdescriptioninput.value==""){
+        alert("please enter all details")
+    }
     var div=document.createElement("div")
     div.setAttribute("class","book-container")
     div.innerHTML=`<h2>${booktitleinput.value}</h2>
